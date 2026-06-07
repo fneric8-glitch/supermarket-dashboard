@@ -36,7 +36,7 @@ def load_data() -> pd.DataFrame:
         df = pd.read_sql("SELECT * FROM supermarket_sales", conn)
         conn.close()
     except Exception as e:
-        st.warning(f"⚠️ DB tidak tersedia, fallback ke CSV: {e}")
+        print(f"DB tidak tersedia, fallback ke CSV: {e}")
         df = _load_csv()
     return _clean(df)
 

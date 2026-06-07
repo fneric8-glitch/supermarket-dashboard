@@ -63,7 +63,7 @@ def render_kpi(df: pd.DataFrame):
         top_prod = top_city = '-'
 
     k1, k2, k3, k4, k5, k6 = st.columns(6)
-    _kpi_card(k1, "💰", "Total Revenue",   f"${tot_rev/1000:.1f}",  "+12.3% vs prev")
+    _kpi_card(k1, "💰", "Total Revenue",   f"${tot_rev/1000:.0f}",  "+12.3% vs prev")
     _kpi_card(k2, "🧾", "Total Transaksi", f"{tot_trx:,}",      "+8.1% vs prev")
     _kpi_card(k3, "📦", "QTY Terjual",     f"{tot_qty:,}",      "+5.7% vs prev")
     _kpi_card(k4, "💵", "Avg Order Value", f"${avg_ord:,.0f}",  "+3.2% vs prev")
